@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="700.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.buttonController">
+   <children>
+      <BorderPane layoutX="353.0" layoutY="139.0" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="559.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="87.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Character Stats">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="614.0" prefWidth="333.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <AnchorPane prefHeight="614.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="617.0" fitWidth="266.0" layoutX="34.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Pictures/lofi.jpg" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="98.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="296.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Character Stats">
+                     <font>
+                        <Font size="64.0" />
+                     </font>
+                  </Text>
+                  <ButtonBar prefHeight="40.0" prefWidth="153.0">
+                    <buttons>
+                      <Button mnemonicParsing="false" onAction="#back" text="Back" />
+                        <Button mnemonicParsing="false" onAction="#home" text="Home" />
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
