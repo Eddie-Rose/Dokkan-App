@@ -7,19 +7,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.startMenuController">
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.startMenuController">
    <children>
-      <ImageView fitHeight="476.0" fitWidth="499.0" layoutX="534.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="476.0" fitWidth="499.0" layoutX="515.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/Post_dangai_training_kurosaki_ichigo_by_mlvega_by_kaioken10-d6sm0si.png" />
          </image>
       </ImageView>
-      <Text layoutX="180.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dokkan Team Builder" AnchorPane.bottomAnchor="601.8125" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="15.0">
+      <Text layoutX="399.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dokkan Team Builder" textAlignment="CENTER" AnchorPane.bottomAnchor="767.0" AnchorPane.leftAnchor="399.0" AnchorPane.rightAnchor="298.375" AnchorPane.topAnchor="40.0">
          <font>
             <Font name="System Bold Italic" size="64.0" />
          </font>
       </Text>
-      <ImageView fitHeight="430.0" fitWidth="282.0" layoutX="750.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="430.0" fitWidth="282.0" layoutX="1012.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/Ichigo.png" />
          </image>
@@ -29,12 +29,12 @@
             <Image url="@../../../img/onepiece.png" />
          </image>
       </ImageView>
-      <Button layoutX="920.0" layoutY="58.0" mnemonicParsing="false" onAction="#callHelpScene" text="help">
+      <Button layoutX="1127.0" layoutY="69.0" mnemonicParsing="false" onAction="#callHelpScene" text="help">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="450.0" layoutY="470.0" mnemonicParsing="false" onAction="#callCharacterScene" text="Click to start" AnchorPane.bottomAnchor="207.8125" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="470.0">
+      <Button layoutX="560.0" layoutY="631.0" mnemonicParsing="false" onAction="#callCharacterScene" prefHeight="130.0" prefWidth="275.0" text="Click to start" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="631.0">
          <font>
             <Font name="AdobePiStd" size="18.0" />
          </font>
