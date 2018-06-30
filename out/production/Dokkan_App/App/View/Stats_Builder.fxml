@@ -29,9 +29,9 @@
          <center>
             <AnchorPane prefHeight="614.0" prefWidth="333.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="617.0" fitWidth="266.0" layoutX="34.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="751.0" fitWidth="656.0" layoutX="132.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Pictures/lofi.jpg" />
+                        <Image url="@../../../img/lofi.jpg" />
                      </image>
                   </ImageView>
                </children></AnchorPane>

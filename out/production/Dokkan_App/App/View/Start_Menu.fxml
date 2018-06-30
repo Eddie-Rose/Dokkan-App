@@ -9,22 +9,12 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.startMenuController">
    <children>
-      <ImageView fitHeight="476.0" fitWidth="499.0" layoutX="534.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/Post_dangai_training_kurosaki_ichigo_by_mlvega_by_kaioken10-d6sm0si.png" />
-         </image>
-      </ImageView>
       <Text layoutX="180.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dokkan Team Builder" AnchorPane.bottomAnchor="601.8125" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="15.0">
          <font>
             <Font name="System Bold Italic" size="64.0" />
          </font>
       </Text>
-      <ImageView fitHeight="430.0" fitWidth="282.0" layoutX="750.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/Ichigo.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="485.0" fitWidth="413.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="466.0" fitWidth="653.0" layoutX="696.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/onepiece.png" />
          </image>
@@ -34,7 +24,17 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="450.0" layoutY="470.0" mnemonicParsing="false" onAction="#callCharacterScene" text="Click to start" AnchorPane.bottomAnchor="207.8125" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="470.0">
+      <ImageView fitHeight="476.0" fitWidth="499.0" layoutX="481.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/Post_dangai_training_kurosaki_ichigo_by_mlvega_by_kaioken10-d6sm0si.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="675.0" fitWidth="416.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/Naruto-Shippuden-PNG-Image.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="532.0" layoutY="502.0" mnemonicParsing="false" onAction="#callCharacterScene" prefHeight="60.0" prefWidth="215.0" text="Click to start" AnchorPane.bottomAnchor="338.0" AnchorPane.leftAnchor="532.0" AnchorPane.rightAnchor="603.0" AnchorPane.topAnchor="502.0">
          <font>
             <Font name="AdobePiStd" size="18.0" />
          </font>
