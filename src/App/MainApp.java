@@ -1,9 +1,12 @@
+package App;
+
 import javafx.application.Application;
-import javafx.stage.Stage;
-import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 //import javafx.scene.layout.BorderPane;
 //import javafx.stage.Stage;
 
@@ -22,7 +25,7 @@ public class MainApp extends Application{
 		
 	}
 	
-	// call the Start_Menu scene from the view package and displays it 
+	// call the Start_Menu scene from the View package and displays it
 	public void initRootLayout(){
 		try {
 			// Load root layout from FXML file.
