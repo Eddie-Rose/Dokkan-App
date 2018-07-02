@@ -6,14 +6,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="900.0" minWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.buttonController">
+<AnchorPane minHeight="900.0" minWidth="1350.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.buttonController">
    <children>
-      <Text layoutX="463.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="help">
+      <Text layoutX="614.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="help">
          <font>
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Text>
-      <Text layoutX="344.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To start building press &quot;Click to start&quot; button" wrappingWidth="312.13671875" />
+      <Text layoutX="526.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To start building press &quot;Click to start&quot; button" wrappingWidth="312.13671875" />
       <ButtonBar layoutY="3.0" prefHeight="40.0" prefWidth="153.0">
          <buttons>
             <Button mnemonicParsing="false" onAction="#back" text="Back" />
