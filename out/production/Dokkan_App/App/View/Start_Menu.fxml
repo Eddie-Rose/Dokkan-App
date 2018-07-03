@@ -10,20 +10,12 @@
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.startMenuController">
    <children>
 
-      <ImageView fitHeight="476.0" fitWidth="499.0" layoutX="671.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/Post_dangai_training_kurosaki_ichigo_by_mlvega_by_kaioken10-d6sm0si.png" />
-         </image>
-      </ImageView>
-
       <Text layoutX="364.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dokkan Team Builder" textAlignment="CENTER" AnchorPane.bottomAnchor="784.9375" AnchorPane.leftAnchor="364.0" AnchorPane.rightAnchor="333.375" AnchorPane.topAnchor="29.9375">
 
          <font>
             <Font name="System Bold Italic" size="64.0" />
          </font>
       </Text>
-      <ImageView fitHeight="485.0" fitWidth="413.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
-      </ImageView>
       <Button layoutX="1127.0" layoutY="69.0" mnemonicParsing="false" onAction="#callHelpScene" text="help">
          <font>
             <Font size="14.0" />
@@ -32,16 +24,9 @@
 
       <Button layoutX="560.0" layoutY="631.0" mnemonicParsing="false" onAction="#callCharacterScene" prefHeight="130.0" prefWidth="275.0" text="Click to start" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="631.0">
       </Button>
-
-      <ImageView fitHeight="476.0" fitWidth="499.0" layoutX="990.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="173.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../img/Post_dangai_training_kurosaki_ichigo_by_mlvega_by_kaioken10-d6sm0si.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="675.0" fitWidth="416.0" layoutX="10.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/Naruto-Shippuden-PNG-Image.png" />
-         </image>
-      </ImageView>
+            <Image url="@../../img/Post_dangai_training_kurosaki_ichigo_by_mlvega_by_kaioken10-d6sm0si.png" />
+         </image></ImageView>
    </children>
 </AnchorPane>
