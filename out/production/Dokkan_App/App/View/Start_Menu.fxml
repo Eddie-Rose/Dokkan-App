@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.startMenuController">
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.startMenuController">
    <children>
 
       <Text layoutX="364.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dokkan Team Builder" textAlignment="CENTER" AnchorPane.bottomAnchor="784.9375" AnchorPane.leftAnchor="364.0" AnchorPane.rightAnchor="333.375" AnchorPane.topAnchor="29.9375">
@@ -22,11 +22,13 @@
          </font>
       </Button>
 
-      <Button layoutX="560.0" layoutY="631.0" mnemonicParsing="false" onAction="#callCharacterScene" prefHeight="130.0" prefWidth="275.0" text="Click to start" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="631.0">
-      </Button>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="173.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="560.0" layoutY="630.0" mnemonicParsing="false" onAction="#callCharacterScene" prefHeight="44.0" prefWidth="275.0" text="Click to start" AnchorPane.bottomAnchor="226.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="630.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font></Button>
+      <ImageView fitHeight="588.0" fitWidth="408.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../img/Post_dangai_training_kurosaki_ichigo_by_mlvega_by_kaioken10-d6sm0si.png" />
+            <Image url="@../../img/Naruto-Shippuden-PNG-Image.png" />
          </image></ImageView>
    </children>
 </AnchorPane>

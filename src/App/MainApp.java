@@ -3,8 +3,10 @@ package App;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 
 import java.io.IOException;
 //import javafx.scene.layout.BorderPane;
@@ -32,11 +34,16 @@ public class MainApp extends Application{
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("View/Start_Menu.fxml"));
 			rootLayout = (AnchorPane) loader.load();
-			
+
+			Image test = new Image("/img/Ichigo.png");
+			ImageView test2 = new ImageView(test);
+			rootLayout.getChildren().add(test2);
+
 			// show the scene containing the root layout
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
 			primaryStage.show();
+
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
