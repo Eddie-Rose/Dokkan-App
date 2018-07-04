@@ -1,0 +1,30 @@
+CREATE TABLE STATS
+(
+cid smallint    NOT NULL,
+hp  smallint    NOT NULL,
+attk smallint   NOT NULL,
+def smallint    NOT NULL,
+cost    smallint    NOT NULL,
+leader_skill    varchar(200)   NOT NULL,
+passive_skill   varchar(200)    NOT NULL,
+attr_type   char(20)    NOT NULL,
+link_1  smallint,
+link_2  smallint,
+link_3  smallint,
+link_4  smallint,
+link_5  smallint,
+link_6  smallint,
+link_7  smallint,
+category varchar(30),
+
+CONSTRAINT pk_stats PRIMARY KEY(cid),
+CONSTRAINT fk_stats_1   FOREIGN KEY(cid)  REFERENCES NAME(cid),
+CONSTRAINT fk_stats_2   FOREIGN KEY(link_1) REFERENCES LINKS(lid),
+CONSTRAINT fk_stats_3   FOREIGN KEY(link_2) REFERENCES LINKS(lid),   
+CONSTRAINT fk_stats_4   FOREIGN KEY(link_3) REFERENCES LINKS(lid), 
+CONSTRAINT fk_stats_5   FOREIGN KEY(link_4) REFERENCES LINKS(lid),
+CONSTRAINT fk_stats_6   FOREIGN KEY(link_5) REFERENCES LINKS(lid), 
+CONSTRAINT fk_stats_7   FOREIGN KEY(link_6) REFERENCES LINKS(lid), 
+CONSTRAINT fk_stats_8   FOREIGN KEY(link_7) REFERENCES LINKS(lid),  
+
+);
