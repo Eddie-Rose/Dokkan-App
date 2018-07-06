@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class buttonController {
+public class ButtonController {
 
 	// Take the user back to the previous scene
 	public void back(ActionEvent event) throws IOException

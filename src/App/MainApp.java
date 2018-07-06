@@ -1,5 +1,6 @@
 package App;
 
+import App.View.StartMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -22,7 +23,6 @@ public class MainApp extends Application{
 	public void start(Stage primaryStage){
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Start Menu");
-		
 		initRootLayout();	
 		
 	}
@@ -35,19 +35,19 @@ public class MainApp extends Application{
 			loader.setLocation(MainApp.class.getResource("View/Start_Menu.fxml"));
 			rootLayout = (AnchorPane) loader.load();
 
-			Image test = new Image("/img/Ichigo.png");
-			ImageView test2 = new ImageView(test);
-			rootLayout.getChildren().add(test2);
 
 			// show the scene containing the root layout
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 
+
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
+
+
 	
 	public Stage getPrimaryStage() {
 		return primaryStage;

@@ -7,28 +7,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.startMenuController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.StartMenuController">
    <children>
-
-      <Text layoutX="364.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dokkan Team Builder" textAlignment="CENTER" AnchorPane.bottomAnchor="784.9375" AnchorPane.leftAnchor="364.0" AnchorPane.rightAnchor="333.375" AnchorPane.topAnchor="29.9375">
-
-         <font>
-            <Font name="System Bold Italic" size="64.0" />
-         </font>
-      </Text>
-      <Button layoutX="1127.0" layoutY="69.0" mnemonicParsing="false" onAction="#callHelpScene" text="help">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-
-      <Button layoutX="560.0" layoutY="630.0" mnemonicParsing="false" onAction="#callCharacterScene" prefHeight="44.0" prefWidth="275.0" text="Click to start" AnchorPane.bottomAnchor="226.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="630.0">
-         <font>
-            <Font name="Arial" size="18.0" />
-         </font></Button>
-      <ImageView fitHeight="588.0" fitWidth="408.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="background" fx:id="background" fitHeight="900.0" fitWidth="1350.0" layoutY="-2.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@../../img/Naruto-Shippuden-PNG-Image.png" />
-         </image></ImageView>
+            <Image url="@../../img/Background/goku_house_background.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-18.0" layoutY="-19.0" prefHeight="781.0" prefWidth="1200.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0">
+         <children>
+      
+            <Text layoutX="205.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dokkan Team Builder" textAlignment="CENTER" AnchorPane.bottomAnchor="513.9375" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="194.375" AnchorPane.topAnchor="0.9375">
+      
+               <font>
+                  <Font name="System Bold Italic" size="64.0" />
+               </font>
+            </Text>
+            <Button layoutX="931.0" layoutY="28.0" mnemonicParsing="false" onAction="#callHelpScene" text="help">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+      
+            <Button layoutX="364.0" layoutY="320.0" mnemonicParsing="false" onAction="#callCharacterScene" prefHeight="161.0" prefWidth="304.0" text="Click to start" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="364.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="320.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
