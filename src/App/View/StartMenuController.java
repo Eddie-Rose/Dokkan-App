@@ -24,7 +24,8 @@ import java.util.ResourceBundle;
 public class StartMenuController implements Initializable {
 
 	@FXML
-	ImageView background;
+	ImageView leftBackground;
+	ImageView test;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources){
@@ -67,6 +68,8 @@ public class StartMenuController implements Initializable {
 
 	public void setBackground() {
 
+	    String testBackground;
+
 		ArrayList<String> listOfFiles = WindowsHandler.fileLister("./src/img/Background");
 
 		if (listOfFiles.isEmpty()){
@@ -81,17 +84,34 @@ public class StartMenuController implements Initializable {
 		String[] listOfFilesString = listOfFiles.toArray(new String[listOfFiles.size()]);
 
 		String randomBackground = listOfFilesString[randomNumber];
-//		System.out.println(randomNumber);
-//        System.out.println (randomBackground);
-		Image img = new Image("img/Background/" + randomBackground);
+		System.out.println(randomNumber);
+        System.out.println (randomBackground);
+		Image setLeftImg = new Image("img/Background/" + randomBackground);
 
+//        if (randomNumber < fileCount){
+//            testBackground = listOfFilesString[randomNumber + 1];
+//        }else {
+//            testBackground = listOfFilesString[(int) (Math.random() * 0)];
+//        }
 
-		background.setImage(img);
-		background.setPreserveRatio(false);
-		background.setFitHeight(950);
-		background.setFitWidth(1400);
+		leftBackground.setImage(setLeftImg);
+		leftBackground.setPreserveRatio(false);
+		leftBackground.setFitHeight(900);
+		leftBackground.setFitWidth(473);
+
+//		setRightImage(randomBackground);
 
 	}
+
+	public void setRightImage (String imgName){
+	    System.out.println(imgName);
+	    Image setRightImg = new Image("img/Background/" + imgName);
+
+        test.setImage(setRightImg);
+        test.setPreserveRatio(false);
+        test.setFitHeight(900);
+        test.setFitWidth(473);
+    }
 	
 	
 }

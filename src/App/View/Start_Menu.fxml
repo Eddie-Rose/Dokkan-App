@@ -7,11 +7,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.StartMenuController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.StartMenuController">
    <children>
-      <ImageView id="background" fx:id="background" fitHeight="900.0" fitWidth="1350.0" layoutY="-2.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fx:id="test" fitHeight="900.0" fitWidth="473.0" layoutX="877.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../img/Background/goku_house_background.png" />
+            <Image url="@../../img/Background/Vegeta_ssj2_by_spongeboss-d30lgfy.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="leftBackground" fitHeight="900.0" fitWidth="473.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/Background/b298c2f10c38bc14be6e196c07f84c27.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="-18.0" layoutY="-19.0" prefHeight="781.0" prefWidth="1200.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0">
@@ -23,17 +28,22 @@
                   <Font name="System Bold Italic" size="64.0" />
                </font>
             </Text>
-            <Button layoutX="931.0" layoutY="28.0" mnemonicParsing="false" onAction="#callHelpScene" text="help">
+            <Button layoutX="502.0" layoutY="408.0" mnemonicParsing="false" onAction="#callHelpScene" text="help">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
       
-            <Button layoutX="364.0" layoutY="320.0" mnemonicParsing="false" onAction="#callCharacterScene" prefHeight="161.0" prefWidth="304.0" text="Click to start" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="364.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="320.0">
+            <Button layoutX="374.0" layoutY="344.0" mnemonicParsing="false" onAction="#callCharacterScene" prefHeight="54.0" prefWidth="302.0" text="Click to start" AnchorPane.bottomAnchor="202.0" AnchorPane.leftAnchor="374.0" AnchorPane.rightAnchor="374.0" AnchorPane.topAnchor="344.0">
                <font>
                   <Font name="Arial" size="18.0" />
                </font>
             </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="425.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/5440487-1122329314-52705.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
