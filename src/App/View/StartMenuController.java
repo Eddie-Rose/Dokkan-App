@@ -29,7 +29,7 @@ public class StartMenuController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources){
 
-		setBackground();
+            setBackground();
 	}
 
 
@@ -76,18 +76,20 @@ public class StartMenuController implements Initializable {
 		int fileCount = listOfFiles.size();
 		System.out.println(fileCount);
 		int randomNumber = (int) (Math.random() * (fileCount));
+		System.out.println ((int) (Math.random()));
 
 		String[] listOfFilesString = listOfFiles.toArray(new String[listOfFiles.size()]);
 
 		String randomBackground = listOfFilesString[randomNumber];
-		System.out.println(randomNumber);
+//		System.out.println(randomNumber);
+//        System.out.println (randomBackground);
 		Image img = new Image("img/Background/" + randomBackground);
 
 
 		background.setImage(img);
 		background.setPreserveRatio(false);
-		background.setFitHeight(900);
-		background.setFitWidth(1350);
+		background.setFitHeight(950);
+		background.setFitWidth(1400);
 
 	}
 	
