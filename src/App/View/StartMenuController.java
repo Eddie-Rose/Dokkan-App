@@ -56,7 +56,7 @@ public class StartMenuController implements Initializable {
 	// Take user to the Help scene
 	public void callHelpScene(ActionEvent event) {
 		try {
-			Parent start_screen = FXMLLoader.load(getClass().getResource("Help.fxml"));
+			Parent start_screen = FXMLLoader.load(getClass().getResource("Help_Menu.fxml"));
 			Scene helpScene = new Scene(start_screen);
 
 			Stage startWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -67,6 +67,7 @@ public class StartMenuController implements Initializable {
 			e.printStackTrace();
 		}
 	}
+
 
 	public void setBackground() {
 
@@ -90,7 +91,7 @@ public class StartMenuController implements Initializable {
         System.out.println(randomBackground);
         Image setLeftImg = new Image("img/Background/" + randomBackground);
 
-        if (randomNumber < fileCount) {
+        if (randomNumber < (fileCount - 1)) {
             int num = randomNumber + 1;
             testBackground = listOfFilesString[num];
         } else {

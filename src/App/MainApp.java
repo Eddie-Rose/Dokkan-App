@@ -21,10 +21,13 @@ public class MainApp extends Application{
 	@Override
 	// Sets the title for the primary stage
 	public void start(Stage primaryStage){
+
+		StartMenuController  view = new StartMenuController();
+
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Start Menu");
 
-		initRootLayout();	
+		initRootLayout();
 		
 	}
 	
