@@ -25,6 +25,8 @@ public class StartMenuController implements Initializable {
 
 	@FXML
 	ImageView leftBackground;
+
+	@FXML
 	ImageView test;
 
 	@Override
@@ -68,50 +70,45 @@ public class StartMenuController implements Initializable {
 
 	public void setBackground() {
 
-	    String testBackground;
+        String testBackground;
 
-		ArrayList<String> listOfFiles = WindowsHandler.fileLister("./src/img/Background");
+        ArrayList<String> listOfFiles = WindowsHandler.fileLister("./src/img/Background");
 
-		if (listOfFiles.isEmpty()){
-			return;
-		}
+        if (listOfFiles.isEmpty()) {
+            return;
+        }
 
-		int fileCount = listOfFiles.size();
-		System.out.println(fileCount);
-		int randomNumber = (int) (Math.random() * (fileCount));
-		System.out.println ((int) (Math.random()));
+        int fileCount = listOfFiles.size();
+        System.out.println(fileCount);
+        int randomNumber = (int) (Math.random() * (fileCount));
+        System.out.println((int) (Math.random()));
 
-		String[] listOfFilesString = listOfFiles.toArray(new String[listOfFiles.size()]);
+        String[] listOfFilesString = listOfFiles.toArray(new String[listOfFiles.size()]);
 
-		String randomBackground = listOfFilesString[randomNumber];
-		System.out.println(randomNumber);
-        System.out.println (randomBackground);
-		Image setLeftImg = new Image("img/Background/" + randomBackground);
+        String randomBackground = listOfFilesString[randomNumber];
+        System.out.println(randomNumber);
+        System.out.println(randomBackground);
+        Image setLeftImg = new Image("img/Background/" + randomBackground);
 
-//        if (randomNumber < fileCount){
-//            testBackground = listOfFilesString[randomNumber + 1];
-//        }else {
-//            testBackground = listOfFilesString[(int) (Math.random() * 0)];
-//        }
+        if (randomNumber < fileCount) {
+            int num = randomNumber + 1;
+            testBackground = listOfFilesString[num];
+        } else {
+            testBackground = listOfFilesString[(int) (Math.random() * 0)];
+        }
 
-		leftBackground.setImage(setLeftImg);
-		leftBackground.setPreserveRatio(false);
-		leftBackground.setFitHeight(900);
-		leftBackground.setFitWidth(473);
-
-//		setRightImage(randomBackground);
-
-	}
-
-	public void setRightImage (String imgName){
-	    System.out.println(imgName);
-	    Image setRightImg = new Image("img/Background/" + imgName);
+        Image setRightImg = new Image("img/Background/" + testBackground);
 
         test.setImage(setRightImg);
         test.setPreserveRatio(false);
         test.setFitHeight(900);
         test.setFitWidth(473);
+
+        leftBackground.setImage(setLeftImg);
+        leftBackground.setPreserveRatio(false);
+        leftBackground.setFitHeight(900);
+        leftBackground.setFitWidth(473);
+
     }
-	
 	
 }

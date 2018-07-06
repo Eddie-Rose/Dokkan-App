@@ -9,11 +9,6 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.View.StartMenuController">
    <children>
-      <ImageView fx:id="test" fitHeight="900.0" fitWidth="473.0" layoutX="877.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../img/Background/Vegeta_ssj2_by_spongeboss-d30lgfy.png" />
-         </image>
-      </ImageView>
       <ImageView fx:id="leftBackground" fitHeight="900.0" fitWidth="473.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/Background/b298c2f10c38bc14be6e196c07f84c27.png" />
@@ -46,5 +41,10 @@
             </ImageView>
          </children>
       </AnchorPane>
+      <ImageView fx:id="test" fitHeight="900.0" fitWidth="473.0" layoutX="927.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/Background/Vegeta_ssj2_by_spongeboss-d30lgfy.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
