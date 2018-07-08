@@ -5,6 +5,8 @@ full_name   varchar(50) NOT NULL,
 sub_name    varchar(50) NOT NULL,
 icon_image  varchar(200)    NOT NULL,
 full_image  varchar(200)    NOT NULL,
-CONSTRAINT pk_name PRIMARY KEY(cid)
+CONSTRAINT pk_name PRIMARY KEY(cid),
+CONSTRAINT pk_name_1 UNIQUE(icon_image);
+ADD CONSTRAINT pk_name_2 UNIQUE(full_image);
 
 );

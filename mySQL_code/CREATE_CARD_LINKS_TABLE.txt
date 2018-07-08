@@ -1,0 +1,11 @@
+CREATE TABLE CARD_LINKS
+(
+cid smallint    NOT NULL,
+lid smallint    NOT NULL,
+
+
+CONSTRAINT pk_card_links PRIMARY KEY(cid,lid),
+CONSTRAINT fk_card_links_1   FOREIGN KEY(cid)  REFERENCES NAME(cid),
+CONSTRAINT fk_card_links_2  FOREIGN KEY(lid) REFERENCES LINKS(lid),
+
+);

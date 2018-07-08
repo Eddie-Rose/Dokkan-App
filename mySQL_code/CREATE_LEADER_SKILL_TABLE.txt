@@ -1,0 +1,16 @@
+CREATE TABLE LEADERSKILL
+(
+cid smallint    NOT NULL,
+affects_category varchar(50) NULL,
+affects_attribute char(20) NULL,
+affects_stats varchar(50) NOT NULL,
+constant_change varchar(20) NULL,
+percentage_change decimal NULL,
+
+
+CONSTRAINT pk_leaderskill PRIMARY KEY(cid,affects_stats),
+CONSTRAINT fk_leaderskill_1   FOREIGN KEY(cid)  REFERENCES NAME(cid),
+
+
+
+);

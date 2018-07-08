@@ -1,0 +1,10 @@
+CREATE TABLE CATEGORY
+(
+cid smallint    NOT NULL,
+card_category varchar(50) NOT NULL,
+
+
+CONSTRAINT pk_category PRIMARY KEY(cid, card_category),
+CONSTRAINT fk_category_1   FOREIGN KEY(cid)  REFERENCES NAME(cid),
+
+);

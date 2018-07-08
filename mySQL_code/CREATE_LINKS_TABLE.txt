@@ -3,5 +3,7 @@ CREATE TABLE LINKS
 lid smallint    NOT NULL,
 link_name   varchar(50) NOT NULL,
 link_buff   varchar(100)    NOT NULL,
-CONSTRAINT pk_links PRIMARY KEY(lid)
+CONSTRAINT pk_links PRIMARY KEY(lid),
+CONSTRAINT pk_links_1 UNIQUE(link_name);
+
 );
