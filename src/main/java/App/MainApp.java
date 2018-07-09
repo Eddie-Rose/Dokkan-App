@@ -22,7 +22,7 @@ public class MainApp extends Application{
 	// Sets the title for the primary stage
 	public void start(Stage primaryStage){
 
-		StartMenuController  view = new StartMenuController();
+		StartMenuController view = new StartMenuController();
 
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Start Menu");

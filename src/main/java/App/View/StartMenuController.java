@@ -1,7 +1,6 @@
 package App.View;
 
 import App.Handler.WindowsHandler;
-import App.MainApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +21,8 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class StartMenuController implements Initializable {
+
+	private final String imageUrl = "img/Background/";
 
 	@FXML
 	ImageView leftBackground;
@@ -73,7 +74,7 @@ public class StartMenuController implements Initializable {
 
         String testBackground;
 
-        ArrayList<String> listOfFiles = WindowsHandler.fileLister("./src/img/Background");
+        ArrayList<String> listOfFiles = WindowsHandler.fileLister("./src/main/resources/" + imageUrl);
 
         if (listOfFiles.isEmpty()) {
             return;
@@ -89,7 +90,7 @@ public class StartMenuController implements Initializable {
         String randomBackground = listOfFilesString[randomNumber];
         System.out.println(randomNumber);
         System.out.println(randomBackground);
-        Image setLeftImg = new Image("img/Background/" + randomBackground);
+        Image setLeftImg = new Image(imageUrl + randomBackground);
 
         if (randomNumber < (fileCount - 1)) {
             int num = randomNumber + 1;
@@ -98,7 +99,7 @@ public class StartMenuController implements Initializable {
             testBackground = listOfFilesString[(int) (Math.random() * 0)];
         }
 
-        Image setRightImg = new Image("img/Background/" + testBackground);
+        Image setRightImg = new Image(imageUrl + testBackground);
 
         test.setImage(setRightImg);
         test.setPreserveRatio(false);
