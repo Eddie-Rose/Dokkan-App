@@ -11,7 +11,7 @@
    <children>
       <ImageView fx:id="leftBackground" fitHeight="900.0" fitWidth="473.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../java/img/Background/b298c2f10c38bc14be6e196c07f84c27.png" />
+            <Image url="@../../img/Background/b298c2f10c38bc14be6e196c07f84c27.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="-18.0" layoutY="-19.0" prefHeight="781.0" prefWidth="1200.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0">
@@ -36,14 +36,14 @@
             </Button>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="425.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../java/img/5440487-1122329314-52705.png" />
+                  <Image url="@../../img/5440487-1122329314-52705.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
       <ImageView fx:id="test" fitHeight="900.0" fitWidth="473.0" layoutX="927.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../java/img/Background/Vegeta_ssj2_by_spongeboss-d30lgfy.png" />
+            <Image url="@../../img/Background/gohan__universe_survival_by_koku78-db3rfnv.png" />
          </image>
       </ImageView>
    </children>
