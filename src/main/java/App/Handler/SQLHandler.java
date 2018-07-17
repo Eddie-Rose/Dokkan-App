@@ -1,60 +1,66 @@
 package App.Handler;
 
-import java.sql.Connection;
-import java.sql.Statement;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.DriverManager;
+import java.sql.*;
+import java.util.HashMap;
 
 public class SQLHandler {
+
+    private static SQLHandler single_instance = null;
 
     private final String hostName = "eddiesserver.database.windows.net";
     private final String dbName = "DokkanData";
     private final String user = "dokkanreader";
     private final String password = "BackingBakh9000";
     private final String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
-    Connection connection = null;
+    private Connection connection = null;
 
-    public static void main(String[] args) {
+    private SQLHandler() {
 
-        String hostName = "eddiesserver.database.windows.net";
-        String dbName = "DokkanData";
-        String user = "dokkanreader";
-        String password = "BackingBakh9000";
-        String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
-        Connection connection = null;
+    }
 
+    public static SQLHandler getInstance() {
+        if (single_instance == null){
+            single_instance = new SQLHandler();
+        }
 
+        return single_instance;
+    }
+
+    public HashMap<Integer, String > statsBuilderInitialisation(){
+        HashMap<Integer, String>  query_result = new HashMap<>();
         try {
             connection = DriverManager.getConnection(url);
             String schema = connection.getSchema();
             System.out.println("Successful connection - Schema: " + schema);
 
-            System.out.println("Query data example:");
-            System.out.println("=========================================");
-
-            // Create and execute a SELECT SQL statement.
-            String selectSql = "SELECT * "
-                    + "FROM STATS AS pc ";
+            String selectLRImage = "SELECT N.cid, N.ICON_IMAGE"
+                    + " FROM NAME AS N"
+                    + " WHERE N.rarity = 'LR'";
 
             try (Statement statement = connection.createStatement();
-                 ResultSet resultSet = statement.executeQuery(selectSql)) {
+                 ResultSet resultSet = statement.executeQuery(selectLRImage)) {
 
-                // Print results from select statement
-                System.out.println("Stats:");
-                while (resultSet.next())
-                {
+                while (resultSet.next()){
+                    query_result.put(resultSet.getInt(1), resultSet.getString(2));
                     System.out.println(resultSet.getString(1) + " "
-                            + resultSet.getString(2));
+                          + resultSet.getString(2));
                 }
                 connection.close();
+
+
             }
-        }
-        catch (Exception e) {
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        return query_result;
     }
 
-
 }
+
+
+
+
+
+
+

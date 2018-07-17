@@ -24,6 +24,7 @@ public class StartMenuController implements Initializable {
 
 	private final String imageUrl = "img/Background/";
 
+
 	@FXML
 	ImageView leftBackground;
 
@@ -112,5 +113,7 @@ public class StartMenuController implements Initializable {
         leftBackground.setFitWidth(473);
 
     }
+
+
 	
 }
