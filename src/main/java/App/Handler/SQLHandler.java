@@ -34,16 +34,15 @@ public class SQLHandler {
             System.out.println("Successful connection - Schema: " + schema);
 
             String selectLRImage = "SELECT N.cid, N.ICON_IMAGE"
-                    + " FROM NAME AS N"
-                    + " WHERE N.rarity = 'LR'";
+                    + " FROM NAME AS N";
+
 
             try (Statement statement = connection.createStatement();
                  ResultSet resultSet = statement.executeQuery(selectLRImage)) {
 
                 while (resultSet.next()){
                     query_result.put(resultSet.getInt(1), resultSet.getString(2));
-                    System.out.println(resultSet.getString(1) + " "
-                          + resultSet.getString(2));
+
                 }
                 connection.close();
 

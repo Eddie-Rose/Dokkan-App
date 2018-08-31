@@ -1,6 +1,9 @@
 package App.View;
 
+import App.Handler.SQLCommands;
 import App.Handler.SQLHandler;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +27,13 @@ import java.util.ResourceBundle;
 
 public class Stats_Builder_Controller implements ButtonController, Initializable {
 
-    private boolean already_excecuted = false;
+    private boolean already_executed = false;
+    private Thread thread;
+    private String threadName = "urlThread";
+    private HashMap id_icon_mapping;
+    private Task<Void> backgroundTask;
+    private Task<Void> sqlTask;
+    private int count;
 
     @FXML
     AnchorPane characterIcons;
@@ -59,39 +68,69 @@ public class Stats_Builder_Controller implements ButtonController, Initializable
 
 
 	public void first_initialisation() {
-        if(!already_excecuted) {
-
-            HashMap id_icon_mapping = SQLHandler.getInstance().statsBuilderInitialisation();
-            Iterator iterator = id_icon_mapping.entrySet().iterator();
-            int count = 0;
-
-            while (iterator.hasNext()) {
-                Map.Entry pair = (Map.Entry) iterator.next();
-                System.out.println(pair.getKey() + " = " + pair.getValue());
+        if(!already_executed) {
 
 
-                Image image = new Image((String)pair.getValue());
-                ImageView toggleImage = new ImageView(image);
-                toggleImage.setPreserveRatio(true);
-                toggleImage.setFitWidth(186);
-
-
-
-                ToggleButton characterIcon = new ToggleButton();
-                characterIcon.setText(null);
-                characterIcon.setGraphic(toggleImage);
-
-                characterIcons.getChildren().add(characterIcon);
-                characterIcon.setLayoutX(204);
-                characterIcon.setLayoutY(33);
-
-            }
-
-
-
-
+            updateCharacterPane(SQLCommands.INITIALIZE);
         }
-        already_excecuted = true;
+
+        already_executed = true;
     }
+
+    private void updateCharacterPane(SQLCommands command){
+
+
+        backgroundTask = new Task<Void>() {
+            @Override
+            public Void call() {
+
+
+                switch (command) {
+                    case INITIALIZE:
+                        id_icon_mapping = SQLHandler.getInstance().statsBuilderInitialisation();
+                        break;
+
+                    default :
+                        System.out.println("No command valid");
+                        break;
+                }
+
+                Iterator iterator = id_icon_mapping.entrySet().iterator();
+                count = 0;
+
+                while (iterator.hasNext()) {
+                    Map.Entry pair = (Map.Entry) iterator.next();
+                    System.out.println(pair.getKey() + " = " + pair.getValue());
+
+
+                    Platform.runLater(() -> {
+                        Image image = new Image((String) pair.getValue());
+                        ImageView toggleImage = new ImageView(image);
+                        toggleImage.setPreserveRatio(true);
+                        toggleImage.setFitWidth(80);
+
+
+                        ToggleButton characterIcon = new ToggleButton();
+                        characterIcon.setText(null);
+                        characterIcon.setGraphic(toggleImage);
+                        characterIcon.setLayoutY(((count / 5) * 80) + ((count / 5) * 13) + 13);
+                        characterIcon.setLayoutX(((count % 5) * 100) + ((count % 5) * 13) + 13);
+
+                        characterIcons.getChildren().add(characterIcon);
+                        count++;
+
+                    });
+
+
+                }
+                return null;
+            }
+        };
+
+        new Thread(backgroundTask).start();
+
+    }
+
+
 
 }
